@@ -126,6 +126,7 @@ section{
     align-items: center;
     gap: 8rem;
     background-color: black;
+    margin-top: 10rem;
 }
 
 .home .home-content h1{
