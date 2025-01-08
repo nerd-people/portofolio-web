@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">  
+    <title>Portofolio Website</title>
+</head>
+<div>
+    <header>
+        <a href="#" class="logo">Portofolio</a>
+
+        <nav>
+            <a href="index.html"> Home</a>
+            <a href="skills.html" >Skills</a>
+            <a href="experience.html" >Experience</a>
+            <a href="portofolio.html" class="active" >My Project</a>
+            <a href="contact.html" >Contact</a>
+        </nav>
+    </header>
+    
+    <div class="utama">
+        <div class="judul">
+            <p class="judulh1"> Project Saya </p>
+        </div>
+        <div class="isi">
+            <h1> -Form login</h1>
+            <div class="imglogin">
+                <img src="image.png">
+            </div>
+            <div class="isilogin">
+                <a href="https://nerd-people.github.io/form-login/" target="_blank" class="btnlogin"> Login </a>
+            </div>
+            <h1> -Kalkulator </h1>
+            <div class="imgcalcu">
+                <img src="calcu.png">
+            </div>
+            <div>
+                <a href="https://nerd-people.github.io/simple-calculator/" target="_blank" class="btncalcu"> Calculator</a>
+            </div>
+            <h1 class="dash"> -Dashboard </h1>
+            <div class="imgdash">
+                <img src="dash.png">
+            </div>
+            <div>
+                <a href="https://nerd-people.github.io/admin-dashboard/" target="_blank" class="btndash"> Admin Dashboard</a>
+            </div>
+            <h1 class="tetris"> -Tetris Game </h1>
+            <div class="imgtetris">
+                <img src="tetris.png">
+            </div>
+            <div>
+                <a href="https://nerd-people.github.io/simple-tetris/" target="_blank" class="btndash"> Game Tetris</a>
+            </div>
+            <h1 class="laporan"> -Laporan Penjualan </h1>
+            <div class="imglaporan">
+                <img src="imglaporan.png">
+            </div>
+            <div>
+                <a href="https://nerd-people.github.io/laporan-penjualan-per20/" target="_blank" class="btndash"> Laporan Penjualan</a>
+            </div>
+            <h1 class="serti">
+                - Sertifikat Sololearn
+               </h1>
+               <div class="filter-buttons">
+                <button class="filter-btn" data-filter="all">
+                 All
+                </button>
+                <button class="filter-btn" data-filter="html">
+                 HTML
+                </button>
+                <button class="filter-btn" data-filter="css">
+                 CSS
+                </button>
+                <button class="filter-btn" data-filter="js">
+                 JS
+                </button>
+                <button class="filter-btn" data-filter="js-intermediate">
+                 JS Intermediate
+                </button>
+               </div>
+               <div class="imghtml">
+                <img alt="HTML certificate from Sololearn" class="filter-item html" height="400" src="sertihtml.jpg" width="500"/>
+                <img alt="CSS certificate from Sololearn" class="filter-item css" height="400" src="serticss.jpg" width="500"/>
+                <img alt="JavaScript certificate from Sololearn" class="filter-item js" height="400" src="sertijs.jpg" width="500"/>
+                <img alt="JavaScript Intermediate certificate from Sololearn" class="filter-item js-intermediate" height="400" src="sertijsinter.jpg" width="500"/>
+               </div>
+               <div>
+                <a class="btnhtml" href="https://api2.sololearn.com/v2/certificates/CC-G5PCEAFM/image/png">
+                 Sertifikat HTML
+                </a>
+                <a class="btncss" href="https://api2.sololearn.com/v2/certificates/CC-OKMPWKEP/image/png">
+                 Sertifikat CSS
+                </a>
+                <a class="btnjs" href="https://api2.sololearn.com/v2/certificates/CC-8FM90GMG/image/png">
+                 Sertifikat JS
+                </a>
+                <a class="btnjs" href="https://api2.sololearn.com/v2/certificates/CC-4ZQXLM21/image/png">
+                 Sertifikat JS Intermediate
+                </a>
+               </div>
+              </div>
+             </div>
+             <script>
+              document.querySelectorAll('.filter-btn').forEach(button => {
+                       button.addEventListener('click', () => {
+                           const filter = button.getAttribute('data-filter');
+                           document.querySelectorAll('.filter-item').forEach(item => {
+                               if (filter === 'all' || item.classList.contains(filter)) {
+                                   item.style.display = 'inline-block';
+                               } else {
+                                   item.style.display = 'none';
+                               }
+                           });
+                           document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                           button.classList.add('active');
+                       });
+                   });
+                </script>
+        </div>
+        </div>
+    </div>
+</body>
+</html>
